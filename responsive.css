@@ -1,0 +1,126 @@
+/* RESPONSIVE DESIGN FOR TABLET */
+
+@media only screen and (min-width: 768px) {
+/* NAV_BAR */
+.navbar {
+    justify-content: space-between;
+}
+/* HOME */
+.home .sub-title {
+    font-size: 40px;
+}
+
+.section-separator {
+    height: 20vh;
+  }
+  
+/* ABOUT ME */
+.about-container {
+    max-width: 80vw;
+    margin: auto;
+}
+.about-main {
+    grid-template-areas: "about-image about-brand" "about-skills about-skills";
+    grid-gap: 15px;
+}
+.about-header {
+    margin-top: 40px;
+}
+.about-image {
+    grid-area: about-image;
+}
+.about-brand {
+    grid-area: about-brand;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.about-skills {
+    grid-area: about-skills;
+}
+
+#profile-pic {
+    width: 25vw;
+}
+
+.brand-statement {
+    font-size: 20px;
+}
+/* .about-main p {
+font-size: 20px;
+padding: 20px 30px;
+} */
+/* ALL PROJECTS */
+.projects-main {    
+    padding-bottom: 20px;
+}
+
+.project-card {
+    margin: 15px;
+}
+
+/* CONTACT */
+.contact-header {
+    padding-top: 100px;
+}
+.contact input,
+textarea {
+    width: 50%;
+}
+.contact input,
+textarea,
+p {
+    padding: 5px 10px;
+    margin: 10px;
+}
+}
+/* RESPONSIVE DESIGN FOR DESKTOP */
+
+@media only screen and (min-width: 1024px) {
+/* HOME */ 
+
+.section-separator {
+    height: 15vh;
+  }
+
+.home .title {
+    font-size: 70px;
+}
+.home .sub-title {
+    font-size: 50px;
+}
+.home .brand-statement {
+    font-size: 50px;
+    padding: 50px 50px;
+}
+/* ABOUT */
+#profile-pic {
+    width: 15vw;
+}
+
+.brand-statement {
+    font-size: 25px;
+}
+
+.skill-name {
+    font-size: 20px;
+}
+
+
+/* ALL PROJECTS */
+
+
+/* Contact Form */
+.contact-header {
+    padding-top: 150px;
+}
+
+#contact-title {
+    font-size: 40px;
+}
+.contact input,
+textarea,
+p {
+    padding: 5px 10px;
+    margin: 10px;
+}

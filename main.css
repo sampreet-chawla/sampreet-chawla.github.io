@@ -1,0 +1,368 @@
+:root {
+  --orange: #eb5e28;
+  --black: black;
+  --off-white: #fffcf2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  text-align: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
+}
+
+body main {
+  display: grid;
+  /* grid-template-rows: auto auto auto auto auto; */
+  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-columns: 1fr;
+  /* grid-gap: 20px;
+	row-gap: 40px; */
+}
+
+/* .collapse .navbar-collapse {
+	justify-content: flex-end;
+} */
+
+/*******************  NAVBAR  *********************/
+
+.navbar .navbar-expand-lg .navbar-dark {
+  background-color: var(--black);
+}
+
+#take-to-home {
+  display: none;
+}
+.section-separator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+}
+
+.section-separator img {
+  width: 80%;
+}
+
+/* .navbar-expand-lg .navbar-collapse {
+	display: flex;
+	justify-content: flex-end !important;
+} */
+
+/* **************** LANDING PAGE / HOME PAGE ******************************/
+
+.home-container {
+  background-color: var(--black);
+  color: var(--off-white);
+  text-align: center;
+  /* padding: 100px 30px 100px 30px; */
+  width: 100% !important;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* display: grid;
+    grid-template-rows: 10% auto;
+    grid-template-columns: auto; */
+  /* flex-direction: align-content: center;
+    justify-content: center; */
+}
+
+.home .title {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 40px;
+  font-weight: bolder;
+  /* padding: 10px 30px 0 30px; */
+  padding-bottom: 0;
+}
+
+.hidden-header {
+  opacity: 0;
+  height: 5vw;
+}
+
+.home .sub-title {
+  font-size: 30px;
+  margin-bottom: 30px;
+  padding-top: 0;
+}
+
+hr {
+  background-color: var(--orange);
+  padding-left: 35%;
+  padding-bottom: 0;
+  width: 20%;
+  height: 0.25em;
+  box-align: center;
+}
+
+/* **************** ALL TITLES AND BUTTONS ******************************/
+
+/* All Titles */
+
+section header .title {
+  font-family: "Fira Sans", sans-serif;
+  font-style: italic;
+  font-size: 40px;
+  letter-spacing: 1px;
+  /* padding-top: 150px; */
+  padding-bottom: 20px;
+}
+
+/* All Buttons */
+
+.btn-primary,
+.btn-submit {
+  background-color: var(--orange);
+  font-style: bold;
+  color: var(--off-white);
+  border-color: var(--orange);
+  box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.4);
+  padding: 10px 20px;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+/* **************** ABOUT ME  ******************************/
+
+.about-container {
+  display: grid;
+  justify-content: center;
+  grid-gap: 20px;
+  padding: 0px 30px;
+}
+
+/* .about-header {
+  margin-top: 20px;
+} */
+
+.brand-statement {
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 20px;
+  font-family: "Fira Sans", sans-serif;
+  /* font-style: italic; */
+  font-size: 15px;
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.about-skills {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile-pic {
+  width: 50vw;
+  /* border-radius: 30%; */
+  border-radius: 50%;
+}
+
+.skill-icon {
+  width: 40px;
+}
+
+.skill-div {
+  padding: 5px;
+  font-family: "Old Standard TT", serif;
+  font-weight: 600;
+}
+
+/* ALL PROJECTS */
+
+.projects-container {
+  display: grid;
+  grid-gap: 20px;
+}
+
+.projects-main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 10px 0;
+}
+
+.project-card {
+  background-color: transparent;
+  box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.4);
+  height: 300px;
+  width: 300px;
+  border: 1px solid black;
+  border-radius: 10px;
+  /* For 3D effect */
+  perspective: 1000px;
+  margin: 10px;
+}
+
+.project-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: 0.8s ease;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .project-card-inner {
+  transform: rotateY(180deg);
+}
+
+.project-card-front,
+.project-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Chrome, Safari, Opera */
+  backface-visibility: hidden;
+}
+
+.project-card-front img {
+  /* width: 320px; */
+  height: auto;
+  border-radius: 10px;
+}
+
+.project-card-back {
+  padding: 15px;
+}
+
+/* Style the front side (fallback if image is missing) */
+/* .project-card-front {
+  background-color: #bbb;
+  color: var(--black);
+} */
+
+/* Style the back side */
+
+.project-card-back {
+  transform: rotateY(180deg);
+}
+
+/*  CONTACT FORM  */
+
+.contact-container {
+  background-color: var(--black);
+  color: var(--off-white);
+  display: grid;
+  grid-template-rows: auto 1fr;
+  grid-template-columns: 1fr;
+  justify-content: center;
+  grid-gap: 10px;
+  width: 100%;
+  padding: 15px;
+}
+
+.contact-header {
+  padding: 20px;
+}
+
+.contact-main {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  padding: 10px;
+  padding-bottom: 10px;
+}
+
+#contact-title {
+  /* padding: 25px 25px 0px 25px; */
+  font-size: 25px;
+  padding-bottom: 0px;
+}
+
+.contact .submit {
+  background-color: var(-off-white);
+  padding: 5px 20px;
+  margin: 5px;
+  width: 100%;
+}
+
+.contact input,
+textarea {
+  border-radius: 10px;
+  width: 75%;
+  margin: 5px;
+}
+
+#contact-thanks {
+  display: none;
+  font-family: "Fira Sans", sans-serif;
+  font-style: italic;
+  font-size: 20px;
+  padding-top: 5px;
+  color: linear-gradient(
+    to right,
+    var(--orange),
+    var(--off-white),
+    var(--orange)
+  );
+  color: var(--orange);
+}
+
+.social-media {
+  padding-top: 10px;
+  font-size: 20px;
+  font-style: bold;
+  font-weight: 600;
+}
+
+.social-media a {
+  color: var(--orange);
+}
+
+.footer {
+  background-color: var(--black);
+  font-size: 15px;
+  color: var(--off-white);
+}
+
+/*  GO-to-top Button */
+
+#myTopBtn {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: var(--black);
+  /* Set a background color */
+  opacity: 0.5;
+  color: var(--off-white);
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 2px 13px 5px 13px;
+  border-radius: 100%;
+  font-size: 24px;
+  /* Increase font size */
+}
+
+#myTopBtn:hover {
+  background-color: #555;
+  /* Add a dark-grey background on hover */
+}
