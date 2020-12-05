@@ -10,9 +10,6 @@
     font-size: 40px;
 }
 
-.section-separator {
-    height: 20vh;
-  }
   
 /* ABOUT ME */
 .about-container {
@@ -46,10 +43,8 @@
 .brand-statement {
     font-size: 20px;
 }
-/* .about-main p {
-font-size: 20px;
-padding: 20px 30px;
-} */
+
+
 /* ALL PROJECTS */
 .projects-main {    
     padding-bottom: 20px;
@@ -78,10 +73,6 @@ p {
 
 @media only screen and (min-width: 1024px) {
 /* HOME */ 
-
-.section-separator {
-    height: 15vh;
-  }
 
 .home .title {
     font-size: 70px;

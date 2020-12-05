@@ -2,6 +2,7 @@
   --orange: #eb5e28;
   --black: black;
   --off-white: #fffcf2;
+  --grey: #b1b1b1;
 }
 
 * {
@@ -22,16 +23,9 @@ body {
 
 body main {
   display: grid;
-  /* grid-template-rows: auto auto auto auto auto; */
-  grid-template-rows: auto auto auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto;
   grid-template-columns: 1fr;
-  /* grid-gap: 20px;
-	row-gap: 40px; */
 }
-
-/* .collapse .navbar-collapse {
-	justify-content: flex-end;
-} */
 
 /*******************  NAVBAR  *********************/
 
@@ -48,15 +42,6 @@ body main {
   align-items: center;
   height: 30vh;
 }
-
-.section-separator img {
-  width: 80%;
-}
-
-/* .navbar-expand-lg .navbar-collapse {
-	display: flex;
-	justify-content: flex-end !important;
-} */
 
 /* **************** LANDING PAGE / HOME PAGE ******************************/
 
@@ -96,7 +81,7 @@ body main {
   padding-top: 0;
 }
 
-hr {
+#orange-line {
   background-color: var(--orange);
   padding-left: 35%;
   padding-bottom: 0;
@@ -114,7 +99,7 @@ section header .title {
   font-style: italic;
   font-size: 40px;
   letter-spacing: 1px;
-  /* padding-top: 150px; */
+  padding-top: 30px;
   padding-bottom: 20px;
 }
 
@@ -130,6 +115,15 @@ section header .title {
   padding: 10px 20px;
   display: inline-block;
   border-radius: 12px;
+}
+
+/* All section Separators */
+.section-separator {
+  background-color: var(--orange);
+  padding-left: 35%;
+  width: 20%;
+  height: 0.25em;
+  box-align: center;
 }
 
 /* **************** ABOUT ME  ******************************/
