@@ -90,6 +90,42 @@ $(".navbar-collapse a").click(function () {
   $(".navbar-collapse").collapse("hide");
 });
 
+/////////////////////////////
+// Heading Animation Script
+
+const heading = document.querySelector("#heading-animate");
+
+function triggerAnimationSequence(element) {
+  const lettersArray = element.innerHTML.trim().split("");
+  let delay = 0;
+
+  element.innerHTML = "";
+  lettersArray.forEach((letter) => {
+    let span = document.createElement("SPAN");
+    let attr = document.createAttribute("data-animate");
+
+    span.setAttributeNode(attr);
+    span.innerHTML = letter;
+    span.style.transitionDelay = `${delay}ms`;
+    element.appendChild(span);
+
+    void span.offsetWidth;
+    span.classList.add("animated");
+    delay += 70;
+  });
+
+  element.removeAttribute("data-animate");
+}
+
+setTimeout(() => {
+  triggerAnimationSequence(heading);
+}, 1000);
+
+const subHeading = document.querySelector("#sub-heading-animate");
+setTimeout(() => {
+  triggerAnimationSequence(subHeading);
+}, 1000);
+
 /////////////////////////
 // For Goto Top Button
 // Source Code from https://www.w3schools.com/howto/howto_js_scroll_to_top.asp

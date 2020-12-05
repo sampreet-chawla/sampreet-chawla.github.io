@@ -7,12 +7,6 @@
     <!-- META TAG FOR RESPONSIVE DESIGN -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- GOOGLE API FONTS -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,600;1,900&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- RESET CSS -->
     <link
       rel="stylesheet"
@@ -100,9 +94,9 @@
       <!-- LANDING PAGE / HOME PAGE -->
       <section class="home-container">
         <div class="home title-div">
-          <h1 class="home title">Sampreet K Chawla</h1>
+          <h1 class="home title" data-animate id="heading-animate" >Sampreet Chawla</h1>
           <hr id="orange-line"/>
-          <h3 class="home sub-title">web developer</h3>
+          <h3 class="home sub-title" data-animate id="sub-heading-animate">software engineer</h3>
         </div>
         <a href="#"></a>
       </section>
@@ -122,8 +116,7 @@
           </div>
           <div class="about-brand">
             <h5 class="brand-statement">
-              A full stack <span class="orange">web developer</span> and an avid
-              learner, who is passionate about bringing ideas to life with
+              Avid learner and a <span class="orange">web developer</span>, who is passionate about bringing ideas to life with
               coding. I take an agile approach to identifying challenges,
               finding the right solutions, and creating great user experiences.
               I am looking forward to joining a collaborative and inclusive team
@@ -137,6 +130,9 @@
                 >Resume</a
               >
             </h5>
+          </div>
+          <div class="skills-title">
+            <h4>Technologies I Use</h4>
           </div>
           <div class="about-skills">
             <div class="col-sm-3 col-xs-6 text-center skill-div">
@@ -185,7 +181,7 @@
             </div>
             <div class="col-sm-3 col-xs-6 text-center skill-div">
               <img src="images/ruby.png" class="skill-icon" />
-              <div class="skill-name" id="take-to-projects">Ruby</div>
+              <div class="skill-name">Ruby</div>
             </div>
             <div class="col-sm-3 col-xs-6 text-center skill-div">
               <img src="images/ruby_on_rails.png" class="skill-icon" />
@@ -211,10 +207,10 @@
         <hr class="section-separator"/>
       </div>
 
-       <!-- ALL PROJECTS -->
+       <!-- PROJECTS -->
       <section class="projects-container" id="take-to-projects">
         <header class="projects-header">
-          <h3 class="title projects-title">All Projects</h3>
+          <h3 class="title projects-title">Projects</h3>
         </header>
         <main class="projects-main">
           <!--Dynamic Content goes here -->
@@ -325,7 +321,6 @@
 
     <!-- OUR JS FILES -->
     <script src="index.js"></script>
-    <script src="particles.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script>
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.js"></script> -->
   </body>
 </html>

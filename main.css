@@ -1,8 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+
 :root {
   --orange: #eb5e28;
   --black: black;
   --off-white: #fffcf2;
   --grey: #b1b1b1;
+  --title-font: "Fira Sans", sans-serif;
+  --text-font: "DM Sans", sans-serif;
 }
 
 * {
@@ -49,25 +54,18 @@ body main {
   background-color: var(--black);
   color: var(--off-white);
   text-align: center;
-  /* padding: 100px 30px 100px 30px; */
   width: 100% !important;
   height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  /* display: grid;
-    grid-template-rows: 10% auto;
-    grid-template-columns: auto; */
-  /* flex-direction: align-content: center;
-    justify-content: center; */
 }
 
 .home .title {
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--title-font);
   font-size: 40px;
-  font-weight: bolder;
-  /* padding: 10px 30px 0 30px; */
-  padding-bottom: 0;
+  font-weight: 600;
+  padding: 0 10px 0;
 }
 
 .hidden-header {
@@ -78,7 +76,7 @@ body main {
 .home .sub-title {
   font-size: 30px;
   margin-bottom: 30px;
-  padding-top: 0;
+  padding: 0 10px 0;
 }
 
 #orange-line {
@@ -90,16 +88,29 @@ body main {
   box-align: center;
 }
 
-/* **************** ALL TITLES AND BUTTONS ******************************/
+/* Animation */
+/* Source - https://codepen.io/marcoangelo/pen/rNVJdxQ */
+[data-animate] {
+  opacity: 0;
+  will-change: auto;
+}
+
+.animated {
+  transition: all 1s cubic-bezier(0.57, 0.08, 0.9, 0.36);
+  opacity: 1;
+}
+
+/* **************** Common Settings ******************************/
 
 /* All Titles */
 
-section header .title {
-  font-family: "Fira Sans", sans-serif;
-  font-style: italic;
-  font-size: 40px;
+section header .title,
+#contact-title {
+  font-family: var(--title-font);
+  /* font-style: italic; */
+  font-size: 30px;
   letter-spacing: 1px;
-  padding-top: 30px;
+  padding: 30px;
   padding-bottom: 20px;
 }
 
@@ -117,7 +128,7 @@ section header .title {
   border-radius: 12px;
 }
 
-/* All section Separators */
+/* All section separators */
 .section-separator {
   background-color: var(--orange);
   padding-left: 35%;
@@ -131,20 +142,17 @@ section header .title {
 .about-container {
   display: grid;
   justify-content: center;
+  align-items: center;
+  align-content: center;
   grid-gap: 20px;
   padding: 0px 30px;
 }
-
-/* .about-header {
-  margin-top: 20px;
-} */
 
 .brand-statement {
   text-align: justify;
   text-justify: inter-word;
   margin: 20px;
-  font-family: "Fira Sans", sans-serif;
-  /* font-style: italic; */
+  font-family: var(--text-font);
   font-size: 15px;
 }
 
@@ -160,22 +168,31 @@ section header .title {
 }
 
 #profile-pic {
-  width: 50vw;
+  width: 53vw;
   /* border-radius: 30%; */
   border-radius: 50%;
+}
+.skills-title h4 {
+  padding: 10px;
+  font-size: 20px;
 }
 
 .skill-icon {
   width: 40px;
 }
 
+.skill-name {
+  font-size: 12px;
+}
+
 .skill-div {
   padding: 5px;
-  font-family: "Old Standard TT", serif;
+  /* font-family: "Old Standard TT", serif; */
+  font-family: var(--text-font);
   font-weight: 600;
 }
 
-/* ALL PROJECTS */
+/* PROJECTS */
 
 .projects-container {
   display: grid;
@@ -188,7 +205,7 @@ section header .title {
   justify-content: center;
   align-items: center;
   align-content: center;
-  padding: 10px 0;
+  padding: 0 0 30px 0;
 }
 
 .project-card {
@@ -236,16 +253,15 @@ section header .title {
   padding: 15px;
 }
 
-/* Style the front side (fallback if image is missing) */
-/* .project-card-front {
-  background-color: #bbb;
-  color: var(--black);
-} */
-
 /* Style the back side */
-
 .project-card-back {
+  font-family: var(--text-font);
   transform: rotateY(180deg);
+}
+
+.project-card-back p {
+  /* color: var(--grey); */
+  font-weight: 500;
 }
 
 /*  CONTACT FORM  */
@@ -276,7 +292,7 @@ section header .title {
 
 #contact-title {
   /* padding: 25px 25px 0px 25px; */
-  font-size: 25px;
+  /* font-size: 25px; */
   padding-bottom: 0px;
 }
 
@@ -296,7 +312,7 @@ textarea {
 
 #contact-thanks {
   display: none;
-  font-family: "Fira Sans", sans-serif;
+  font-family: var(--title-font);
   font-style: italic;
   font-size: 20px;
   padding-top: 5px;
@@ -324,6 +340,7 @@ textarea {
   background-color: var(--black);
   font-size: 15px;
   color: var(--off-white);
+  padding: 10px;
 }
 
 /*  GO-to-top Button */
