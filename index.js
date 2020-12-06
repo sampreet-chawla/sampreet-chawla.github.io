@@ -46,6 +46,9 @@ const saveContact = (name, email, message) => {
 
 // Flip Card Reference - https://www.w3schools.com/howto/howto_css_flip_card.asp
 // <img src="${project.image}" alt="${project.image}" style="width:300px;height:auto;margin:auto;">
+{
+  /* <img src="${project.image}" alt="${project.title} picture" style="width:300px;height:300px;" ></img> */
+}
 // Render the cards
 const renderAllProjects = (projects) => {
   projects.forEach((project) => {
@@ -53,7 +56,7 @@ const renderAllProjects = (projects) => {
       `<div class="project-card">
         <div class="project-card-inner">
           <div class="project-card-front">            
-            <img src="${project.image}" alt="${project.title} picture" style="width:300px;height:300px;" >
+          <img src="${project.image}" alt="${project.title} picture" style="width:300px;height:340px;" />
           </div>
           <div class="project-card-back">
             <h4>${project.title}</h4>
@@ -119,12 +122,12 @@ function triggerAnimationSequence(element) {
 
 setTimeout(() => {
   triggerAnimationSequence(heading);
-}, 1000);
+}, 200);
 
 const subHeading = document.querySelector("#sub-heading-animate");
 setTimeout(() => {
   triggerAnimationSequence(subHeading);
-}, 1000);
+}, 200);
 
 /////////////////////////
 // For Goto Top Button

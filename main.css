@@ -117,6 +117,7 @@ section header .title,
 /* All Buttons */
 
 .btn-primary,
+.btn-primary:hover,
 .btn-submit {
   background-color: var(--orange);
   font-style: bold;
@@ -161,10 +162,13 @@ section header .title,
 }
 
 .about-skills {
-  display: flex;
+  /* display: flex;
   flex-flow: row wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
 }
 
 #profile-pic {
@@ -199,6 +203,11 @@ section header .title,
   grid-gap: 20px;
 }
 
+#projects-more {
+  font-size: small;
+  color: var(--grey);
+}
+
 .projects-main {
   display: flex;
   flex-flow: row wrap;
@@ -211,7 +220,8 @@ section header .title,
 .project-card {
   background-color: transparent;
   box-shadow: 4px 4px 7px 2px rgba(0, 0, 0, 0.4);
-  height: 300px;
+  /* height: 300px; */
+  height: 340px;
   width: 300px;
   border: 1px solid black;
   border-radius: 10px;
@@ -244,17 +254,18 @@ section header .title,
 }
 
 .project-card-front img {
-  /* width: 320px; */
   height: auto;
   border-radius: 10px;
 }
 
-.project-card-back {
-  padding: 15px;
+.project-card-back p {
+  text-justify: inter-word;
+  text-justify: newspaper;
 }
 
 /* Style the back side */
 .project-card-back {
+  padding: 10px;
   font-family: var(--text-font);
   transform: rotateY(180deg);
 }

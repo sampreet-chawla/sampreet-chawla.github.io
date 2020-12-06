@@ -44,6 +44,10 @@ section header .title,
 }
 .about-skills {
     grid-area: about-skills;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
 }
 
 #profile-pic {
@@ -61,7 +65,7 @@ section header .title,
 }
 
 .project-card {
-    margin: 15px;
+    margin: 10px;
 }
 
 /* CONTACT */
