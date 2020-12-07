@@ -1,129 +1,127 @@
 /* RESPONSIVE DESIGN FOR TABLET */
 
 @media only screen and (min-width: 768px) {
-/* NAV_BAR */
-.navbar {
+  /* NAV_BAR */
+  .navbar {
     justify-content: space-between;
-}
-/* HOME */
-.home .sub-title {
+  }
+  /* HOME */
+  .home .sub-title {
     font-size: 30px;
-}
+  }
 
-/* All Titles */
-section header .title,
-#contact-title {
+  /* All Titles */
+  section header .title,
+  #contact-title {
     font-size: 40px;
-}
+  }
 
-  
-/* ABOUT ME */
-.about-container {
+  /* ABOUT ME */
+  .about-container {
     max-width: 80vw;
     margin: auto;
-}
-.about-main {
+  }
+  .about-main {
     grid-template-areas: "about-image about-brand" "skills-title skills-title" "about-skills about-skills";
     grid-gap: 15px;
-}
-.about-header {
+  }
+  .about-header {
     margin-top: 40px;
-}
-.about-image {
+  }
+  .about-image {
     grid-area: about-image;
-}
-.about-brand {
+  }
+  .about-brand {
     grid-area: about-brand;
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-}
-.skills-title {
+  }
+  .skills-title {
     grid-area: skills-title;
     font-size: 25px;
-}
-.about-skills {
+  }
+  .about-skills {
     grid-area: about-skills;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
-}
+  }
 
-#profile-pic {
+  #profile-pic {
     width: 25vw;
-}
+  }
 
-.brand-statement {
+  .brand-statement {
     font-size: 20px;
-}
+  }
 
-
-/* PROJECTS */
-.projects-main {    
+  /* PROJECTS */
+  .projects-main {
     padding: 0 0 30px 0;
-}
+  }
 
-.project-card {
+  .project-card {
     margin: 10px;
-}
+  }
 
-/* CONTACT */
-.contact input,
-textarea {
+  /* CONTACT */
+  .contact input,
+  textarea {
     width: 50%;
-}
-.contact input,
-textarea,
-p {
+  }
+  .contact input,
+  textarea,
+  p {
     padding: 5px 10px;
     margin: 10px;
+  }
 }
-}
+
 /* RESPONSIVE DESIGN FOR DESKTOP */
 
 @media only screen and (min-width: 1024px) {
-/* HOME */ 
+  /* HOME */
 
-.home .title {
+  .home .title {
     font-size: 70px;
-}
-.home .sub-title {
+  }
+  .home .sub-title {
     font-size: 50px;
-}
-.home .brand-statement {
+  }
+  .home .brand-statement {
     font-size: 50px;
     padding: 50px 50px;
-}
-/* ABOUT */
-#profile-pic {
+  }
+  /* ABOUT */
+  #profile-pic {
     width: 20vw;
-}
+  }
 
-.brand-statement {
+  .brand-statement {
     font-size: 25px;
-}
+  }
 
-.skills-title h4 {
+  .skills-title h4 {
     font-size: 30px;
-}
+  }
 
-.skill-name {
+  .skill-name {
     font-size: 15px;
-}
+  }
 
+  /* PROJECTS */
 
-/* PROJECTS */
-
-
-/* Contact Form */
-.contact-header {
+  /* Contact Form */
+  .contact-header {
     padding-top: 50px;
-}
+  }
 
-.contact input,
-textarea,
-p {
+  .contact input,
+  textarea,
+  p {
     padding: 5px 10px;
     margin: 10px;
+  }
 }

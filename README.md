@@ -13,7 +13,7 @@ It has the following sections -
 
 ## Technologies Used to build this site
 
-HTML5, CSS3, Javascript, Bootstrap for Navbar, Axios for Google Sheets API integration
+HTML5, CSS3, Javascript, Bootstrap for Navbar, Ajax for Google Sheets API integration
 
 ## Refactored Site -
 

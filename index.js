@@ -45,10 +45,6 @@ const saveContact = (name, email, message) => {
 };
 
 // Flip Card Reference - https://www.w3schools.com/howto/howto_css_flip_card.asp
-// <img src="${project.image}" alt="${project.image}" style="width:300px;height:auto;margin:auto;">
-{
-  /* <img src="${project.image}" alt="${project.title} picture" style="width:300px;height:300px;" ></img> */
-}
 // Render the cards
 const renderAllProjects = (projects) => {
   projects.forEach((project) => {
