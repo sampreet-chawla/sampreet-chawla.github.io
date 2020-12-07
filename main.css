@@ -259,8 +259,7 @@ section header .title,
 }
 
 .project-card-back p {
-  text-justify: inter-word;
-  text-justify: newspaper;
+  text-align: justify;
 }
 
 /* Style the back side */
