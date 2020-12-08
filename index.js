@@ -20,30 +20,6 @@ $.ajax({ url: sheetAsJSON })
     renderAllProjects(projects);
   });
 
-// Update the Contact Form Information to Google Sheets
-const saveContact = (name, email, message) => {
-  const currentDate = new Date().toString();
-  let text = {};
-  console.log(currentDate);
-  $.post(
-    "https://sheetdb.io/api/v1/laljk8kowfvxr",
-    {
-      data: [{ Name: name, Email: email, Message: message, Date: currentDate }],
-    },
-    function (data, status) {
-      console.log(
-        "Data: " + JSON.stringify(data) + "\nStatus: " + status + "\n "
-      );
-      if (status === "success") {
-        alert("Thanks for reaching out! I shall get back to you in 1-2 days.");
-      } else {
-        alert("Unable to save your details, Please try again later.");
-      }
-    }
-  );
-  return text;
-};
-
 // Flip Card Reference - https://www.w3schools.com/howto/howto_css_flip_card.asp
 // Render the cards
 const renderAllProjects = (projects) => {
@@ -67,6 +43,31 @@ const renderAllProjects = (projects) => {
   });
 };
 
+// Update the Contact Form Information to Google Sheets
+const saveContact = async (name, email, message) => {
+  const currentDate = new Date().toString();
+  console.log(currentDate);
+  try {
+    const response = await fetch(
+      "https://v1.nocodeapi.com/starmom123/google_sheets/fpIYCyfsXUemeqWJ?tabId=Contact",
+      {
+        method: "post",
+        body: JSON.stringify([[name, email, message, currentDate]]),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    const json = await response.json();
+    console.log("Success:", JSON.stringify(json));
+    alert("Thanks for reaching out! I shall get back to you in 1-2 days.");
+  } catch (error) {
+    console.error("Error:", error);
+    alert("Unable to save your details, Please try again later.");
+  }
+};
+
+/* Save the Form details in google Sheet */
 $("form").on("submit", (event) => {
   event.preventDefault();
 
@@ -81,9 +82,10 @@ $("form").on("submit", (event) => {
   $("#contact-thanks").text("Thanks for reaching out.").css("display", "block");
 
   $(event.currentTarget).trigger("reset");
-  $(".btn-submit").attr("disabled", true);
+  // $(".btn-submit").attr("disabled", true); // Intentionally not disabling, may change it later if required.
 });
 
+/* Handle closing of navbar after selection of the nav-item */
 $(".navbar-collapse a").click(function () {
   $collapseVal = $(".navbar-collapse").collapse();
   $(".navbar-collapse").collapse("hide");
@@ -91,8 +93,6 @@ $(".navbar-collapse a").click(function () {
 
 /////////////////////////////
 // Heading Animation Script
-
-const heading = document.querySelector("#heading-animate");
 
 function triggerAnimationSequence(element) {
   const lettersArray = element.innerHTML.trim().split("");
@@ -116,6 +116,7 @@ function triggerAnimationSequence(element) {
   element.removeAttribute("data-animate");
 }
 
+const heading = document.querySelector("#heading-animate");
 setTimeout(() => {
   triggerAnimationSequence(heading);
 }, 200);
