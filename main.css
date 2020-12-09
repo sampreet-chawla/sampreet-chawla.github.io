@@ -117,6 +117,7 @@ section header .title,
 
 .btn-primary,
 .btn-primary:hover,
+.btn-primary:visited,
 .btn-submit {
   background-color: var(--orange);
   font-style: bold;
