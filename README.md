@@ -11,7 +11,7 @@ It has the following sections -
 - Projects - My selective favorite projects.
 - Contact - To reach me.
 
-### Upcoming
+### Future Features
 
 - Blogs for the Projects
 - Testimonials
