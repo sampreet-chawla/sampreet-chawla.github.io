@@ -11,10 +11,15 @@ It has the following sections -
 - Projects - My selective favorite projects.
 - Contact - To reach me.
 
-## Technologies Used to build this site
+### Upcoming
+
+- Blogs for the Projects
+- Testimonials
+
+### Technologies used to build this site
 
 HTML5, CSS3, Javascript, Bootstrap for Navbar, Ajax for Google Sheets API integration
 
-## Refactored Site -
+### Refactored Site -
 
-It is a refactored code from the project, I had developed as part of GA's Unit 1 Project Portfolio.. It included extra Bootstrap's Project Carousel. [Repo link to my Unit 1 Project Portfolio](https://github.com/sampreet-chawla/portfolio-GA-project1)
+It is a refactored code from the project, I had developed as part of GA's Unit 1 Project Portfolio. It included extra Bootstrap's Project Carousel. [Repo link to my Unit 1 Project Portfolio](https://github.com/sampreet-chawla/portfolio-GA-project1)
