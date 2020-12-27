@@ -79,6 +79,11 @@ body main {
   padding: 0 10px 0;
 }
 
+.home a {
+  color: white;
+  text-decoration: none;
+}
+
 #orange-line {
   background-color: var(--orange);
   padding-left: 35%;
@@ -170,6 +175,12 @@ section header .title,
 #profile-pic {
   width: 53vw;
   border-radius: 50%;
+}
+
+.resume {
+  margin: 20px;
+  float: right;
+  padding: 10px 40px;
 }
 .skills-title h4 {
   padding: 10px;
