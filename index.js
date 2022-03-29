@@ -9,7 +9,7 @@
 let sheetAsJSON = "https://sheets.googleapis.com/v4/spreadsheets/1PCS9xZV7bCEX0Onnkn6k4wbTPwxeKnLuKf8yjEsTEqQ/values/Sheet1";
 $.ajax({ url: sheetAsJSON })
   .then((data) => {
-    alert ("Project list: data: " + data);
+    console.log("Project list: data: " + data);
     let projects = data.feed.entry.map((project) => {
       return {
         title: project.gsx$title.$t,
