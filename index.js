@@ -1,9 +1,15 @@
 // Fetch the project list and their details from Google API
-let sheetAsJSON =
-  "https://spreadsheets.google.com/feeds/list/1PCS9xZV7bCEX0Onnkn6k4wbTPwxeKnLuKf8yjEsTEqQ/od6/public/values?alt=json";
 
+// Google Sheets API V3
+// let sheetAsJSON =
+//  "https://spreadsheets.google.com/feeds/list/1PCS9xZV7bCEX0Onnkn6k4wbTPwxeKnLuKf8yjEsTEqQ/od6/public/values?alt=json";
+
+// Google Sheets API V4
+// Original URL - https://docs.google.com/spreadsheets/d/17Zk6aB24bRRA6p1-rH7-P6QTb-ggn39r/edit?usp=sharing&ouid=103149239452987594610&rtpof=true&sd=true
+let sheetAsJSON = "https://sheets.googleapis.com/v4/spreadsheets/1PCS9xZV7bCEX0Onnkn6k4wbTPwxeKnLuKf8yjEsTEqQ/values/Sheet1";
 $.ajax({ url: sheetAsJSON })
   .then((data) => {
+    alert ("Project list: data: " + data);
     let projects = data.feed.entry.map((project) => {
       return {
         title: project.gsx$title.$t,
