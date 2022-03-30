@@ -1,26 +1,20 @@
 // Fetch the project list and their details from Google API
 
-// Google Sheets API V3
-// let sheetAsJSON =
-//  "https://spreadsheets.google.com/feeds/list/1PCS9xZV7bCEX0Onnkn6k4wbTPwxeKnLuKf8yjEsTEqQ/od6/public/values?alt=json";
-
-// Google Sheets API V4
-// Original URL - https://docs.google.com/spreadsheets/d/17Zk6aB24bRRA6p1-rH7-P6QTb-ggn39r/edit?usp=sharing&ouid=103149239452987594610&rtpof=true&sd=true
-let sheetAsJSON = "https://sheets.googleapis.com/v4/spreadsheets/1PCS9xZV7bCEX0Onnkn6k4wbTPwxeKnLuKf8yjEsTEqQ/values/Sheet1";
+// Ajax call with Google Sheets API V4 
+let sheetAsJSON = "https://sheets.googleapis.com/v4/spreadsheets/1PCS9xZV7bCEX0Onnkn6k4wbTPwxeKnLuKf8yjEsTEqQ/values/Sheet1?key=AIzaSyCVKPqSn24LLIrEBEpOEBuQfua8vCmy2pU";
 $.ajax({ url: sheetAsJSON })
-  .then((data) => {
-    console.log("Project list: data: " + data);
-    let projects = data.feed.entry.map((project) => {
-      return {
-        title: project.gsx$title.$t,
-        image: project.gsx$image.$t,
-        description: project.gsx$description.$t,
-        techs: project.gsx$techs.$t,
-        url: project.gsx$url.$t,
-      };
-    });
-
-    return projects;
+    .then((data) => {
+        const projects = data.values.map((project) => {
+            return {
+                title: project[0],
+                image: project[1],
+                description: project[2],
+                techs: project[3],
+                url: project[4],
+            };
+        });
+        projects.shift();
+        return projects;
   })
   .then((projects) => {
     renderAllProjects(projects);
