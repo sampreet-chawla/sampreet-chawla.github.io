@@ -311,7 +311,7 @@ If you don't want ot reach out but want me to know you read this, use the contac
       </section>
     </main>
 
-    <footer class="footer">&copy; Sampreet K Chawla 2022</footer>
+      <footer class="footer">&copy; Sampreet K Chawla <span id="currentYear"></span></footer>
 
     <!-- THE STYLES  -->
     <!-- ******************************************** -->
@@ -330,6 +330,9 @@ If you don't want ot reach out but want me to know you read this, use the contac
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
+     <script>
+       document.getElementById("currentYear").innerHTML = new Date().getUTCFullYear();
+     </script>
 
     <!-- OUR JS FILES -->
     <script src="index.js"></script>
